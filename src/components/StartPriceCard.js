@@ -1,6 +1,4 @@
-import React from "react";
-
-function StartPriceCard({ title, description, price, buttonLabel }) {
+const StartPriceCard = ({ title, description, price, buttonLabel }) => {
   return (
     <div className="flex mt-8">
       <div
@@ -39,6 +37,6 @@ function StartPriceCard({ title, description, price, buttonLabel }) {
       </div>
     </div>
   );
-}
+};
 
 export default StartPriceCard;

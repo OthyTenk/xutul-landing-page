@@ -1,6 +1,5 @@
-import React from "react";
-import QpayCard from "./QpayCard";
 import MonpayCard from "./MonpayCard";
+import QpayCard from "./QpayCard";
 
 export const Channels = () => {
   return (

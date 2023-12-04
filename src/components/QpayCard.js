@@ -1,6 +1,4 @@
-import React from "react";
-
-function QpayCard({ title, description }) {
+const QpayCard = ({ title, description }) => {
   return (
     <div className="flex mt-8">
       <div
@@ -22,6 +20,6 @@ function QpayCard({ title, description }) {
       </div>
     </div>
   );
-}
+};
 
 export default QpayCard;

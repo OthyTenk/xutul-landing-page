@@ -1,13 +1,12 @@
-import React from "react";
-import FeatureCard from "./FeatureCard";
 import {
-  ClockIcon,
   ArrowPathRoundedSquareIcon,
   ChartBarIcon,
-  HeartIcon,
+  ClockIcon,
   DevicePhoneMobileIcon,
+  HeartIcon,
   UsersIcon,
 } from "@heroicons/react/24/outline";
+import FeatureCard from "./FeatureCard";
 
 const Feature = () => {
   return (
