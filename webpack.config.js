@@ -1,14 +1,7 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const path = require("path");
 
-module.exports = {
+export default {
   entry: "./src/index.js",
-  out: "/dist",
-  output: {
-    filename: "main.js",
-    path: path.resolve(__dirname, "dist"),
-    clean: true,
-  },
   module: {
     rules: [
       {
@@ -48,9 +41,4 @@ module.exports = {
       inject: "body",
     }),
   ],
-  resolve: {
-    modules: [__dirname, "src", "node_modules"],
-    extensions: ["*", ".js", ".jsx", ".css"],
-  },
-  mode: "development",
 };
