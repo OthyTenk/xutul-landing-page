@@ -1,6 +1,4 @@
-import React from "react";
-
-function SignUp() {
+const SignUp = () => {
   return (
     <section className="w-full bg-[#f0784e] py-[60px]">
       <div className="max-w-7xl mx-auto px-8 flex flex-col items-center antialiased">
@@ -28,6 +26,6 @@ function SignUp() {
       </div>
     </section>
   );
-}
+};
 
 export default SignUp;

@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
 import { ArrowUpIcon } from "@heroicons/react/24/outline";
+import React, { useEffect, useState } from "react";
 
-function ScrollToTop() {
+const ScrollToTop = () => {
   const [showGoButton, setShowGoButton] = useState(false);
 
   useEffect(() => {
@@ -30,6 +30,6 @@ function ScrollToTop() {
       )}
     </>
   );
-}
+};
 
 export default ScrollToTop;

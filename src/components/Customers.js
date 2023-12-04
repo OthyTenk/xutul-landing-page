@@ -1,6 +1,4 @@
-import React from "react";
-
-function Customers() {
+const Customers = () => {
   return (
     <section id="customers" className="w-full bg-[#f0784e] py-[140px]">
       <div className="max-w-7xl mx-auto px-8 flex flex-col items-center antialiased">
@@ -36,6 +34,6 @@ function Customers() {
       </div>
     </section>
   );
-}
+};
 
 export default Customers;

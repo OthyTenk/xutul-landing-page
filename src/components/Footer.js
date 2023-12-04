@@ -1,6 +1,8 @@
-import React from "react";
 import logo2 from "../assets/images/logo_02.png";
-function Footer() {
+
+const Footer = () => {
+  const year = new Date();
+
   return (
     <footer className="bg-[#081828] text-white w-full py-[140px]">
       <div className="max-w-7xl mx-auto px-8 flex flex-col md:items-start md:flex-row items-center antialiased">
@@ -28,6 +30,7 @@ function Footer() {
             >
               BidMind
             </a>
+            . &copy; 2022 - {year.getFullYear()}
           </p>
         </div>
 
@@ -115,6 +118,6 @@ function Footer() {
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;

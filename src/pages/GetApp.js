@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-// import Loader from "../components/Loader";
+import { useEffect } from "react";
 
 const GetApp = () => {
   useEffect(() => {
@@ -23,7 +22,6 @@ const GetApp = () => {
       <br />
       Апп татах хуудасруу шилжүүлж байна!
       <br />
-      {/* <Loader show={true} /> */}
     </div>
   );
 };
