@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 function Contact() {
@@ -29,7 +29,7 @@ function Contact() {
         "BDAtStvIsgQJ7Qdjb"
       )
       .then(
-        (response) => {
+        () => {
           setEmail("");
           setName("");
           setPhone("");

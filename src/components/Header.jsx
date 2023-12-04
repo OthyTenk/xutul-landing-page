@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import logo from "../assets/images/logo_02.png";
 import white from "../assets/images/white-logo_02.png";
 
 const menuData = [
   {
-    url: "./#home",
+    url: "#home",
     label: "Эхлэл",
   },
   {
-    url: "./#features",
+    url: "#features",
     label: "Боломж",
   },
   // {
@@ -17,11 +17,11 @@ const menuData = [
   //   label: "Харилцагчид",
   // },
   {
-    url: "./#pricing",
+    url: "#pricing",
     label: "Үнийн санал",
   },
   {
-    url: "./#channels",
+    url: "#channels",
     label: "Төлбөр авах сувгууд",
   },
 ];
@@ -30,7 +30,9 @@ const Header = () => {
   const [change, setChange] = useState(false);
   const [showSlide, setShowSlide] = useState(false);
   const location = useLocation();
-  const path = location.hash.split("#")[1] || "home";
+  console.log(location)
+  // const path = location.hash.split("#")[1] || "home";
+  const path = "home"
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -104,8 +106,11 @@ const Header = () => {
             <ul className="w-full mb-3 pb-3 flex-1">
               {menuData.map(({ url, label }, index) => (
                 <li className="py-3 border-b" key={index}>
-                  <a
-                    href={url}
+                  <Link
+                    to={{
+                      pathname:"./",
+                      hash: url
+                    }}
                     className="relative hover:text-[#f0784e] hover:drop-shadow-md"
                     onClick={() => setShowSlide(!showSlide)}
                   >
@@ -121,7 +126,7 @@ const Header = () => {
                         url.includes(path) ? "w-1/2" : "w-0"
                       } h-1 bg-[#f0784e] rounded-l-2xl transition-all duration-300`}
                     ></span>
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
