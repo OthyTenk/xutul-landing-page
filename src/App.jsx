@@ -8,9 +8,7 @@ import OutStand from "./pages/OutStand";
 import Public from "./pages/Public";
 
 
-const App = () => {
-
-  return (
+const App = () => (
       <Routes>
       <Route path="/" element={<Public />} />
       <Route path="/get-app" element={<GetApp />} />
@@ -19,6 +17,6 @@ const App = () => {
       <Route path="*" element={<NotFound />} />
     </Routes>
   )
-}
+
 
 export default App
