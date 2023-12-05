@@ -1,6 +1,13 @@
-# React + Vite
+# Xutul Landing page screenshot
+<img width="1920px" alt="Screenshot of Xutul Landing page" src="https://github.com/OthyTenk/xutul-web/blob/main/screenshot/screenshot.png">
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Tech stacks
+- React.js
+- React router dom
+- Vite
+- Tailwindcss (with postcss and autoprefixer)
+- Hero icons
+- Frame motion
 
 Currently, two official plugins are available:
 
