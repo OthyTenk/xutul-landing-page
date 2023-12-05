@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLocation, Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import logo from "../assets/images/logo_02.png";
 import white from "../assets/images/white-logo_02.png";
 
@@ -30,9 +30,7 @@ const Header = () => {
   const [change, setChange] = useState(false);
   const [showSlide, setShowSlide] = useState(false);
   const location = useLocation();
-  console.log(location)
-  // const path = location.hash.split("#")[1] || "home";
-  const path = "home"
+  const hash = location.hash || '#home'
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -106,11 +104,7 @@ const Header = () => {
             <ul className="w-full mb-3 pb-3 flex-1">
               {menuData.map(({ url, label }, index) => (
                 <li className="py-3 border-b" key={index}>
-                  <Link
-                    to={{
-                      pathname:"./",
-                      hash: url
-                    }}
+                  <a href={url}
                     className="relative hover:text-[#f0784e] hover:drop-shadow-md"
                     onClick={() => setShowSlide(!showSlide)}
                   >
@@ -118,15 +112,15 @@ const Header = () => {
 
                     <span
                       className={`absolute -bottom-2 left-1/2 ${
-                        url.includes(path) ? "w-1/2" : "w-0"
+                        url === hash ? "w-1/2" : "w-0"
                       } h-1 bg-[#f0784e] rounded-r-xl transition-all duration-300`}
                     ></span>
                     <span
                       className={`absolute -bottom-2 right-1/2 ${
-                        url.includes(path) ? "w-1/2" : "w-0"
+                        url === hash ? "w-1/2" : "w-0"
                       } h-1 bg-[#f0784e] rounded-l-2xl transition-all duration-300`}
                     ></span>
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -228,14 +222,14 @@ const Header = () => {
 
                   <span
                     className={`absolute bottom-4 left-1/2 ${
-                      url.includes(path) ? "w-1/2" : "w-0"
+                      url.includes(hash) ? "w-1/2" : "w-0"
                     } h-1 ${
                       change ? "bg-[#f0784e]" : "bg-white"
                     } rounded-r-xl transition-all duration-500`}
                   ></span>
                   <span
                     className={`absolute bottom-4 right-1/2 ${
-                      url.includes(path) ? "w-1/2" : "w-0"
+                      url.includes(hash) ? "w-1/2" : "w-0"
                     } h-1 ${
                       change ? "bg-[#f0784e]" : "bg-white"
                     } rounded-l-2xl transition-all duration-500`}
