@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import { Suspense, lazy } from "react";
 import { Channels } from "../components/Channels";
 import Header from "../components/Header";
@@ -30,6 +31,7 @@ const Public = () => {
         <ScrollToTop />
         {/* Footer */}
         <Footer />
+        <Analytics />
       </Suspense>
     </>
   );
