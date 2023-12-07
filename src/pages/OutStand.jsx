@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import { lazy, Suspense } from "react";
 import Header from "../components/Header";
 import Loading from "../components/Loading";
@@ -17,6 +18,7 @@ function OutStand() {
         <ScrollToTop />
         {/* Footer */}
         <Footer />
+        <Analytics />
       </Suspense>
     </>
   );
